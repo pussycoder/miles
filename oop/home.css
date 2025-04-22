@@ -1,0 +1,57 @@
+/* Global background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0ecff, #f7f3f6);
+    color: #333;
+  }
+  
+  /* Dashboard wrapper */
+  .home-container {
+    max-width: 960px;
+    margin: 50px auto;
+    background: #0e020d;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Welcome title */
+  .welcome {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f2f0f1;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Card grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: 50px, 50px, 50px;
+    gap: 25px;
+  }
+  
+  /* Individual card style */
+  .card {
+    background: linear-gradient(135deg, #c506f0, #bdc6d6);
+    color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #b90dfd, #e6e8ed);
+  }
+  
+  /* Hide admin card if not admin */
+  .hidden {
+    display: none;
+  }

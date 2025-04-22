@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Inventory System</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="home-container">
+    <div class="welcome" id="welcome-text">Welcome, [User]</div>
+    <div class="grid">
+      <div class="card" id="products-card">📦 Products</div>
+      <div class="card" id="suppliers-card">🚚 Suppliers</div>
+      <div class="card" id="stock-card">📥 Stock</div>
+      <div class="card" id="sales-card">💰 Sales</div>
+      <div class="card" id="reports-card">📊 Reports</div>
+      <div class="card" id="users-card">👤 Users</div> <!-- Admin only -->
+    </div>
+  </div>
+
+  <script>
+    const user = {
+      username: "Rham",
+      role: "Staff" // or "Admin"
+    };
+
+    document.getElementById("welcome-text").textContent = `Welcome, ${user.username} (${user.role})`;
+
+    // Hide Users card for non-admins
+    if (user.role !== "Admin") {
+      document.getElementById("users-card").classList.add("hidden");
+    }
+
+    // You can add click events for navigation here
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => {
+        alert(`Clicked: ${card.textContent.trim()}`);
+        // Later, load actual modules here
+      });
+    });
+  </script>
+</body>
+</html>
